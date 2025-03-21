@@ -18,8 +18,8 @@ body {
     padding: 15px 50px;
 }
 
-.logo img {
-    height: 50px;
+.logo  {
+    color: white;
 }
 
 .nav-links {
