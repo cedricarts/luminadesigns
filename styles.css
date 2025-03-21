@@ -11,6 +11,7 @@ body {
 
 .hero {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background: white;
@@ -44,15 +45,19 @@ body {
 }
 
 .hero-content {
-    max-width: 50%;
+    flex: 1;
+    min-width: 300px;
     position: relative;
     z-index: 2;
+    padding: 20px;
 }
 
 .hero-image {
+    flex: 1;
     position: relative;
     z-index: 2;
     max-width: 50%;
+    text-align: center;
 }
 
 .hero-image img {
@@ -79,6 +84,7 @@ h1 {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    display: inline-block;
 }
 
 .contact {
@@ -91,4 +97,22 @@ h1 {
 .phone {
     font-size: 1.5em;
     font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-image {
+        max-width: 100%;
+        padding-top: 20px;
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+    .hero::before, .hero::after {
+        display: none; /* Hide circles on small screens */
+    }
 }
