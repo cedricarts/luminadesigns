@@ -9,6 +9,32 @@ body {
     position: relative;
 }
 
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 15px 50px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Hero Section */
 .hero {
     display: flex;
     flex-wrap: wrap;
@@ -87,6 +113,7 @@ h1 {
     display: inline-block;
 }
 
+/* Contact Section */
 .contact {
     background: #00AEEF;
     color: white;
@@ -101,6 +128,14 @@ h1 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        padding: 10px 0;
+    }
     .hero {
         flex-direction: column;
         text-align: center;
@@ -116,3 +151,4 @@ h1 {
         display: none; /* Hide circles on small screens */
     }
 }
+
